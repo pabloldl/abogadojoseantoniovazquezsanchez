@@ -1,66 +1,30 @@
 ﻿# José Antonio Vázquez Sánchez · Abogado
 
-Web estática independiente con HTML5, CSS3 y JavaScript vanilla. Abrir `index.html` con Live Server de VS Code. No requiere instalación ni compilación.
+Web estática rediseñada el 28 de octubre de 2026. Abrir `index.html` con Live Server. HTML5, CSS3 y JavaScript vanilla, sin instalación, compilación o despliegue.
 
-## Diseño vigente
+## Diseño y contenido
 
-Revisión integral del 22 de octubre de 2026, documentada en [AUDITORIA-ORIGINALIDAD.md](AUDITORIA-ORIGINALIDAD.md). Se sustituyeron la composición nominal serif, el índice lateral, el menú desplegable, las acciones con flechas Unicode, la retícula anterior, el fade-up y el contacto y pie originales.
+Identidad centrada en el nombre, fondos marfil, verde sobrio y tipografía Literata con Source Sans 3. Portada, presentación personal, consultas y contacto. Navegación móvil desplegable con cierre mediante Escape y al seleccionar un destino; sin JavaScript los enlaces permanecen visibles. Transiciones discretas compatibles con `prefers-reduced-motion`.
 
-La navegación actual es un índice compacto de cinco pestañas siempre visibles, también en móvil, sin hamburguesa ni desplegable. El membrete queda en el flujo; únicamente el índice permanece pegado al borde superior. Los enlaces conservan Portada, Despacho, Enfoque, Ubicación y Contacto y su indicador activo.
+Se conservan los datos documentados en el proyecto anterior: nombre, actividad de abogado, teléfono 647 280 789 y dirección Edificio El Andén, Plaza El Andén, s/n, Local 2A, 11670 El Bosque, Cádiz. No se ha realizado una verificación externa nueva de esos datos. No hay especialidades acreditadas en la documentación disponible; por ello se ofrece una invitación general a consultar por teléfono. No se añaden experiencia, formación, colegiación, horarios, correo electrónico, WhatsApp ni promesas de resultados.
 
-Sistema tipográfico local:
+No hay formularios, analítica, mapas incrustados o dependencias remotas. Los enlaces de teléfono abren el marcador; el enlace de ubicación abre una búsqueda de la dirección en Google Maps. Los textos y datos profesionales de los documentos legales siguen pendientes de ser facilitados y validados por el titular; no se han creado documentos o enlaces ficticios.
 
-- Archivo Narrow, peso 500: nombre en mayúsculas sobre dos bandas; conceptos, teléfono y nombre del edificio.
-- Literata, peso 400 y tamaño óptico automático: titulares secundarios y firma de cierre, sin cursivas.
-- Source Sans 3: párrafos humanistas y navegación.
-- DM Mono: acciones, numeración y datos de referencia.
+## Recursos existentes reutilizados
 
-Las cuatro familias están en `fonts/`, con sus licencias SIL Open Font License 1.1 sin modificar. Proceden del repositorio oficial Google Fonts: [Archivo Narrow](https://github.com/google/fonts/tree/main/ofl/archivonarrow), [Literata](https://github.com/google/fonts/tree/main/ofl/literata), [Source Sans 3](https://github.com/google/fonts/tree/main/ofl/sourcesans3) y [DM Mono](https://github.com/google/fonts/tree/main/ofl/dmmono). Son recursos locales: el navegador no contacta con Google Fonts.
+Fuentes locales Literata y Source Sans 3, con sus licencias OFL en `fonts/`. Las otras fuentes del proyecto anterior se conservan sin cargarlas.
 
-Las acciones tienen referencias entre corchetes y geometrías CSS propias: contacto con límites verticales y flecha descendente; llamada con doble filete; ubicación con arranque vertical, flecha de recorrido y línea que crece desde la derecha. Copiar cuenta con un signo de duplicación que cambia tras la copia. No hay rellenos genéricos, sombras, píldoras ni degradados. La identidad y el favicon siguen siendo propuestas provisionales, no un logotipo oficial.
+Fotografía local `img/luz-arquitectura.jpg`, de Khadijah Karaca, procedente de Pexels. Es ilustrativa y se indica en su leyenda y texto alternativo; no representa al abogado ni su despacho. Se conserva la documentación de origen: https://www.pexels.com/photo/a-long-hallway-with-sunlight-coming-through-the-windows-27566337/ y licencia https://www.pexels.com/license/ (documentadas en el proyecto previo el 22 de octubre de 2026).
 
-## Imagen y licencia
+## Comprobaciones ejecutadas
 
-- Archivo local: `img/luz-arquitectura.jpg`, 1920 × 1280 px, aproximadamente 151 KB.
-- Autora: Khadijah Karaca, a través de Pexels.
-- [Fotografía original: A long hallway with sunlight coming through the windows](https://www.pexels.com/photo/a-long-hallway-with-sunlight-coming-through-the-windows-27566337/).
-- [Licencia Pexels](https://www.pexels.com/license/), consultada el 22 de octubre de 2026. Permite uso gratuito y modificación, también en una web comercial. No implica respaldo de la autora ni permite redistribución como producto de stock independiente.
-- Origen de la copia optimizada: `https://images.pexels.com/photos/27566337/pexels-photo-27566337.jpeg?auto=compress&cs=tinysrgb&w=1920`.
-- Recorte mediante CSS, desaturación discreta y carga diferida. Se conserva la única fotografía del proyecto y se cambia su montaje: margen de encuadernación, referencia lateral y leyenda desplazada.
-- Es ilustrativa: no representa el despacho, el edificio ni una ubicación confirmada del abogado. Se indica expresamente en el pie y en el texto alternativo.
+- `node --check js/script.js`: correcto.
+- Chrome headless real a 375, 768, 1440 y 1920 px: sin desbordamiento horizontal, imágenes rotas, anclas inexistentes, errores JavaScript o respuestas HTTP fallidas; ambas fuentes cargadas.
+- Apertura y cierre del menú móvil al navegar, foco del destino y enlaces `tel:` correctos.
+- Movimiento reducido: desplazamiento automático sin suavizado.
+- JavaScript deshabilitado: navegación visible y botón de menú oculto.
+- Revisión visual de la página completa a 375 px y portada a 1440 px.
 
-Todos los recursos se sirven localmente. Google Maps únicamente se abre al pulsar sus enlaces. No hay mapas incrustados, recursos remotos automáticos, analítica ni cookies de seguimiento.
+Resultados y capturas actuales: `.qa/redesign-results.json`, `.qa/redesign-*.png` y `.qa/redesign-full-*.png`. Script: `.qa/redesign-check.cjs`. Las evidencias anteriores de `.qa/` son históricas y no validan esta versión. No se ha probado en un iPhone físico ni Safari, ni se ha validado el marcador externo de Google Maps. No se ha hecho una auditoría legal o certificación de accesibilidad.
 
-## Contenido y documentación pendiente
-
-Se mantienen el nombre, actividad, dirección y teléfono proporcionados. Claridad, Rigor y Discreción son principios de comunicación, sin promesas de resultados. No se atribuyen especialidades, experiencia, colegiación, horarios, honorarios o disponibilidad no facilitados.
-
-El HTML contiene un punto comentado para incorporar la documentación profesional y legal que facilite y valide el titular. No se ha inventado un aviso legal, política de privacidad o datos fiscales, ni se afirma cumplimiento normativo.
-
-SEO conservado: título local, meta description, Open Graph textual y JSON-LD LegalService con información confirmada. No se inventa un dominio para canonical, og:url o imagen social absoluta.
-
-## Funcionalidad y accesibilidad
-
-- Índice activo durante la lectura y enlaces a capítulos con destino enfocable.
-- Enlace para saltar al contenido, foco visible y cinco pestañas accesibles sin JavaScript.
-- Llamadas a `tel:+34647280789`; copia exacta de `647280789` con anuncio mediante `role="status"`.
-- Si el portapapeles no está disponible se intenta la copia tradicional; si también falla, aparece un campo seleccionado para copiar manualmente.
-- Dos enlaces Maps con la dirección completa exacta, sin coordenadas inventadas. Aviso accesible de apertura en otra pestaña y `rel="noopener noreferrer"`.
-- Revelado horizontal de bandas de texto y trazado de divisores; sin fade-up ni desplazamiento de secciones. Las transiciones, las animaciones y el scroll suave se desactivan con `prefers-reduced-motion`, incluso cuando se activa durante la sesión.
-- En móvil, pestañas de al menos 62 px de alto y acciones de al menos 48 px; composición nominal, ficha de dirección, contacto y colofón adaptados individualmente.
-
-## Verificación ejecutada
-
-`node --check js/script.js` correcto. Pruebas reales en Chrome headless a 375, 768, 1440 y 1920 px, con revisión visual de portadas, páginas completas y contactos:
-
-- Sin desbordamiento horizontal, imágenes rotas, anclas inexistentes ni errores JavaScript del proyecto.
-- Las cuatro fuentes locales se cargan y las dos líneas del nombre caben sin recorte.
-- Cinco pestañas visibles con zonas táctiles superiores a 44 px.
-- Navegación, indicador activo y foco correctos en Despacho, Enfoque, Ubicación y Contacto; el índice fijo no tapa el destino.
-- Copia real al portapapeles: `647280789`; también comprobada la alternativa manual tras simular bloqueo de las dos API de copia.
-- Enlaces telefónicos y consultas de Maps verificados. No se ha comprobado un marcador dentro del servicio externo.
-- Línea de acción extendida al interactuar, modo de movimiento reducido y lectura/navegación sin JavaScript comprobados.
-
-Evidencias locales ignoradas en `.qa/`: `results.json`, capturas `screen-*`, `full-*` y `contacto-*`, `actions-hover.png`, láminas `comparison-top.png` y `comparison-contact.png` de los doce proyectos anteriores. No son necesarias para usar la web. Estas pruebas no son una certificación de accesibilidad ni una auditoría legal.
-
-Se compararon hashes SHA-256 de 202 archivos de los otros doce proyectos antes y después: cero cambios (`.qa/other-projects-verification.json`). Todo el trabajo se limita a esta carpeta. No se añadieron frameworks, configuraciones de Netlify ni despliegues.
+Solo se ha trabajado dentro de esta carpeta, sin modificar otras webs ni añadir configuración de alojamiento.
